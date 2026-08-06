@@ -15,9 +15,31 @@ privacidad.html   Política de privacidad (RGPD)
 datos.html        Tratamiento de datos
 css/styles.css    Estilos del sitio
 css/legal.css     Estilos de las páginas legales
+js/i18n.js        Traducciones ES · EN · ET
 js/main.js        Animaciones, formularios y lógica
 .cpanel.yml       Despliegue automático de cPanel
 ```
+
+## Idiomas
+
+El sitio está en **español, inglés y estonio**, con un selector compacto
+(ES · EN · ET) en la barra de navegación. En móvil vive dentro del menú.
+
+- El HTML se escribe **en español**, que es el idioma base.
+- `js/i18n.js` contiene los tres diccionarios (170 claves cada uno).
+- Cada elemento traducible lleva `data-i18n="clave"`; los marcadores de
+  posición de los formularios usan `data-ph="clave"`.
+- Al primer acceso se detecta el idioma del navegador; después se recuerda
+  la elección en `localStorage`.
+
+**Para añadir o cambiar un texto:** edite el HTML (versión española), añada
+el atributo `data-i18n` con una clave nueva y registre esa clave en los tres
+diccionarios. Si falta en alguno, ese elemento simplemente conserva el
+español, sin romper la página.
+
+> Las páginas legales están **solo en español**. Traducir textos jurídicos
+> requiere revisión profesional en cada idioma; no conviene hacerlo de forma
+> automática.
 
 ## Páginas legales
 

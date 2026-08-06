@@ -5,6 +5,53 @@
 (function () {
   "use strict";
 
+  /* ───── Idioma (ES · EN · ET) ─────
+     El HTML viene en español; el diccionario reemplaza los textos marcados
+     con data-i18n. La elección se guarda en localStorage. */
+  var LANGS = ["es", "en", "et"];
+  var dict = window.SPORTRADE_I18N || {};
+
+  function applyLang(lang) {
+    if (LANGS.indexOf(lang) === -1) lang = "es";
+    var table = dict[lang];
+    if (!table) return;
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var val = table[el.dataset.i18n];
+      if (typeof val === "string") el.innerHTML = val;
+    });
+    // Marcadores de posición de los campos de formulario
+    document.querySelectorAll("[data-ph]").forEach(function (el) {
+      var val = table[el.dataset.ph];
+      if (typeof val === "string") el.placeholder = val;
+    });
+
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".lang-btn").forEach(function (b) {
+      b.classList.toggle("active", b.dataset.lang === lang);
+    });
+    try { localStorage.setItem("sportrade-lang", lang); } catch (e) {}
+
+    // El selector de dirección guarda su etiqueta traducida en el campo oculto
+    var activeDir = document.querySelector(".dir-btn.active");
+    if (activeDir) {
+      var hidden = document.getElementById("direccionInput");
+      if (hidden) hidden.value = activeDir.textContent.trim();
+    }
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("sportrade-lang"); } catch (e) {}
+  if (!saved) {
+    var nav0 = (navigator.language || "es").slice(0, 2).toLowerCase();
+    saved = LANGS.indexOf(nav0) > -1 ? nav0 : "es";
+  }
+  applyLang(saved);
+
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () { applyLang(btn.dataset.lang); });
+  });
+
   /* ───── Preloader ───── */
   window.addEventListener("load", function () {
     setTimeout(function () {
@@ -403,9 +450,8 @@
       btn.addEventListener("click", function () {
         dirToggle.querySelectorAll(".dir-btn").forEach(function (b) { b.classList.remove("active"); });
         btn.classList.add("active");
-        var esCriptoFiat = btn.dataset.dir === "cripto-fiat";
-        dirInput.value = esCriptoFiat ? "Cripto → Fiat" : "Fiat → Cripto";
-        montoInput.placeholder = esCriptoFiat ? "p. ej. 5,000 USDT" : "p. ej. 5,000 USD";
+        dirInput.value = btn.textContent.trim();
+        montoInput.placeholder = "5,000";
       });
     });
   }

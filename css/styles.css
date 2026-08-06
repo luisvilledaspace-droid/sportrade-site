@@ -176,7 +176,23 @@ h2.light { color: var(--ivory); }
 .nav-links a:hover { color: var(--ivory); }
 .nav-links a:hover::after { width: 100%; }
 .nav-links .mobile-cta { display: none; }
-.nav-actions { display: flex; align-items: center; gap: 0.5rem; }
+.nav-actions { display: flex; align-items: center; gap: 0.9rem; }
+
+/* ─── Selector de idioma ─── */
+.lang-switch {
+  display: flex; align-items: center;
+  border: 1px solid rgba(245,242,234,0.2); border-radius: 2px; overflow: hidden;
+}
+.lang-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--sans); font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.1em; color: rgba(245,242,234,0.5);
+  padding: 0.4rem 0.55rem; transition: color 0.3s, background 0.3s;
+}
+.lang-btn + .lang-btn { border-left: 1px solid rgba(245,242,234,0.15); }
+.lang-btn:hover { color: var(--ivory); background: rgba(255,255,255,0.06); }
+.lang-btn.active { background: var(--gold); color: var(--navy-950); }
+.lang-switch-mobile { display: none; }
 .nav-burger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
 .nav-burger span { width: 24px; height: 1.5px; background: var(--ivory); transition: all 0.3s; }
 
@@ -664,7 +680,12 @@ h2.light { color: var(--ivory); }
   .nav-actions .btn-ghost { display: none; }
 }
 @media (max-width: 860px) {
-  .nav-actions .btn-gold { display: none; }
+  /* El selector de idioma se traslada al menú desplegable: en la barra
+     no caben logo, idiomas y botón de menú a la vez. */
+  .nav-actions { display: none; }
+  .lang-switch-mobile { display: flex; margin-top: 0.5rem; }
+  .lang-switch-mobile .lang-btn { padding: 0.6rem 1.1rem; font-size: 0.75rem; }
+  .nav-inner { gap: 0.8rem; }
   .manifesto-grid, .cta-grid, .pricing-grid, .express-grid { grid-template-columns: 1fr; gap: 3rem; }
   .dash-body { grid-template-columns: 1fr; }
   .dash-side { flex-direction: row; overflow-x: auto; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0; }
@@ -679,6 +700,9 @@ h2.light { color: var(--ivory); }
   .form-row.two { grid-template-columns: 1fr; }
   .dash-kpis { grid-template-columns: 1fr; }
   .cta-form { padding: 1.8rem; }
+  .logo-text { font-size: 0.7rem; letter-spacing: 0.18em; }
+  .logo-text em { font-size: 0.48rem; }
+  .logo-mark { width: 34px; height: 34px; font-size: 1.1rem; }
   .registry { flex-direction: column; gap: 1.4rem; padding: 1.8rem; }
   .registry-facts { grid-template-columns: 1fr; gap: 1.1rem; }
   .manifesto, .solutions, .platform, .testimonials, .process, .cta, .pricing, .express { padding: 4.5rem 0; }

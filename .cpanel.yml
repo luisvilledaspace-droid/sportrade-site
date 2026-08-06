@@ -15,3 +15,4 @@ deployment:
     - /bin/cp -f css/styles.css /home/gsbwndpt/sportrade.co/css/styles.css
     - /bin/cp -f css/legal.css /home/gsbwndpt/sportrade.co/css/legal.css
     - /bin/cp -f js/main.js /home/gsbwndpt/sportrade.co/js/main.js
+    - /bin/cp -f js/i18n.js /home/gsbwndpt/sportrade.co/js/i18n.js
