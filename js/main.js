@@ -166,14 +166,56 @@
       var p = Math.min((ts - start) / dur, 1);
       var eased = 1 - Math.pow(1 - p, 4);
       var val = target * eased;
+      // en-US: separador de miles con coma, para que las cifras en USD
+      // coincidan con el formato del panel ($394,825) y no se lean como decimales.
       var text = decimals > 0
         ? val.toFixed(decimals)
-        : Math.round(val).toLocaleString("es-CO");
+        : Math.round(val).toLocaleString("en-US");
       el.textContent = prefix + text + suffix;
-      if (p < 1) requestAnimationFrame(frame);
+      if (p < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.dataset.counted = "1";
+      }
     }
     requestAnimationFrame(frame);
   }
+  /* ───── Cifra en vivo: conversiones totales ─────
+     Consulta el volumen bruto gestionado desde el panel interno y actualiza
+     los contadores marcados con [data-live-total].
+
+     CONFIGURACIÓN: escriba abajo el dominio donde vive el endpoint, sin barra
+     final. Ejemplo: "https://panel.sportrade.co"
+     Si se deja vacío, el sitio muestra el valor estático de data-count y no
+     hace ninguna petición. */
+  var PANEL_ORIGIN = "";
+  var TOTAL_ENDPOINT = "/api/public/fintech/total-income";
+
+  function refreshLiveTotal() {
+    if (!PANEL_ORIGIN) return;
+    fetch(PANEL_ORIGIN + TOTAL_ENDPOINT, { headers: { "Accept": "application/json" } })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        var valor = Number(data.totalIncome);
+        if (!isFinite(valor) || valor <= 0) throw new Error("valor inválido");
+        document.querySelectorAll("[data-live-total]").forEach(function (el) {
+          el.dataset.count = valor;
+          // Si el contador ya terminó su animación, refresca el texto en el acto.
+          if (el.dataset.counted === "1") {
+            el.textContent = (el.dataset.prefix || "") + Math.round(valor).toLocaleString("en-US");
+          }
+        });
+      })
+      .catch(function () {
+        /* Sin conexión o endpoint caído: se conserva el valor estático. */
+      });
+  }
+  refreshLiveTotal();
+  setInterval(refreshLiveTotal, 300000); // refresca cada 5 minutos
+
   var counterIO = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

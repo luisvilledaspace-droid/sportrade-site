@@ -56,9 +56,33 @@ Ambos formularios (Solicitar acceso y Conversión Express) envían a
 
 Para cambiar el destinatario, edite la constante `MAIL_TO` en `js/main.js`.
 
+## Cifra en vivo: conversiones totales
+
+Las dos cifras marcadas con `data-live-total` en `index.html` (el hero y la
+sección de números) muestran el **volumen bruto gestionado** tomado del panel
+interno.
+
+Para conectarlas, edite en `js/main.js` la constante:
+
+```js
+var PANEL_ORIGIN = "https://SU-DOMINIO";   // sin barra final
+```
+
+Consulta `GET {PANEL_ORIGIN}/api/public/fintech/total-income` y usa el campo
+`totalIncome`. Se refresca al cargar y luego cada 5 minutos.
+
+- Si `PANEL_ORIGIN` queda vacío, no se hace ninguna petición y se muestra el
+  valor estático del atributo `data-count`.
+- Si el endpoint falla o no responde, también se conserva el valor estático:
+  la cifra nunca queda en blanco ni en cero.
+
+Para actualizar el valor de respaldo, cambie `data-count` en ambos elementos.
+
 ## Pendientes antes de publicar
 
 - [ ] Activar FormSubmit con el correo de confirmación.
+- [ ] Definir `PANEL_ORIGIN` en `js/main.js` para la cifra en vivo.
+- [ ] Reemplazar `USUARIO` en `.cpanel.yml` por el usuario real de cPanel.
 - [ ] Reemplazar cifras y certificaciones de demostración por las reales
       (volumen procesado, número de clientes, licencias, testimonios).
 - [ ] Reemplazar las fotos de Unsplash por fotografía propia si se desea.
