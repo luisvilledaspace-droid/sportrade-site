@@ -27,14 +27,20 @@ npx serve .
 
 ### Opción A — Git Version Control (recomendada, permite actualizar con un clic)
 
-1. Suba este repositorio a GitHub (o Bitbucket).
-2. Edite `.cpanel.yml` y reemplace `USUARIO` por su usuario real de cPanel.
-   Confirme también la ruta de destino (`public_html` para el dominio principal).
-3. En cPanel: **Git™ Version Control → Create**.
-   - Marque *Clone a Repository*.
-   - Pegue la URL del repositorio.
-   - Defina la ruta del repositorio, por ejemplo `/home/USUARIO/repositories/sportrade-site`.
-4. Entre al repositorio creado → pestaña **Pull or Deploy** → **Deploy HEAD Commit**.
+El archivo `.cpanel.yml` ya está listo y usa `$HOME`, así que **no hay que editarlo**.
+Publica en `public_html` (dominio principal).
+
+1. En cPanel: **Git™ Version Control → Create**.
+   - Active *Clone a Repository*.
+   - **Clone URL:** `https://github.com/luisvilledaspace-droid/sportrade-site.git`
+   - **Repository Path:** `repositories/sportrade-site`
+   - **Repository Name:** `sportrade-site`
+2. Pulse **Create**. cPanel clona el repositorio.
+3. Entre al repositorio → pestaña **Pull or Deploy** → **Deploy HEAD Commit**.
+
+> Si el repositorio de GitHub es **privado**, cPanel pedirá una clave SSH:
+> genere una en *Terminal* o *SSH Access*, y añádala en GitHub bajo
+> *Settings → Deploy keys*. Si es público, no hace falta.
 
 Para publicar cambios futuros: `git push` y luego *Deploy HEAD Commit* en cPanel.
 
@@ -82,7 +88,6 @@ Para actualizar el valor de respaldo, cambie `data-count` en ambos elementos.
 ## Pendientes antes de publicar
 
 - [ ] Activar FormSubmit con el correo de confirmación.
-- [ ] Reemplazar `USUARIO` en `.cpanel.yml` por el usuario real de cPanel.
 - [ ] Reemplazar las cifras de demostración que siguen siendo inventadas:
       "640+ empresas", "40+ activos", "99.99% disponibilidad" y los tres
       testimonios. La cifra de conversiones totales ya es real (viene del panel).

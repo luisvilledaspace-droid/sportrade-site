@@ -1,15 +1,16 @@
 ---
 # Despliegue automático de cPanel (Git Version Control → Deploy HEAD Commit).
 #
-# IMPORTANTE: reemplace "USUARIO" por su nombre de usuario real de cPanel.
-# Para verlo: en cPanel, la barra lateral derecha muestra "Nombre de usuario".
+# Usa $HOME, así que funciona sin editar nada: cPanel lo resuelve al directorio
+# de su cuenta (/home/su-usuario).
 #
-# La ruta de destino suele ser:
-#   /home/USUARIO/public_html/            → dominio principal (sportrade.co)
-#   /home/USUARIO/public_html/subcarpeta/ → subcarpeta o subdominio
+# El sitio se publica en el dominio principal (public_html).
+# Para publicarlo en una subcarpeta de prueba, cambie DEPLOYPATH por:
+#   $HOME/public_html/nuevo/
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/USUARIO/public_html/
-    - /bin/cp -R index.html $DEPLOYPATH
-    - /bin/cp -R css $DEPLOYPATH
-    - /bin/cp -R js $DEPLOYPATH
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/mkdir -p $DEPLOYPATH/css $DEPLOYPATH/js
+    - /bin/cp -f index.html $DEPLOYPATH
+    - /bin/cp -f css/styles.css $DEPLOYPATH/css/
+    - /bin/cp -f js/main.js $DEPLOYPATH/js/
