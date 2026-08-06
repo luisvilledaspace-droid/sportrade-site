@@ -9,11 +9,29 @@ Se puede subir tal cual a cualquier hosting.
 ## Estructura
 
 ```
-index.html        Página completa
-css/styles.css    Estilos
+index.html        Página principal
+terminos.html     Términos de servicio
+privacidad.html   Política de privacidad (RGPD)
+datos.html        Tratamiento de datos
+css/styles.css    Estilos del sitio
+css/legal.css     Estilos de las páginas legales
 js/main.js        Animaciones, formularios y lógica
 .cpanel.yml       Despliegue automático de cPanel
 ```
+
+## Páginas legales
+
+Los tres documentos legales están redactados sobre una premisa central:
+**Sportrade OÜ es una empresa de desarrollo de software** (EMTAK 62101) y
+**no posee licencia financiera**. Declaran expresamente que no es banco,
+entidad de pago ni proveedor de servicios de activos virtuales.
+
+Si en el futuro la sociedad obtiene una licencia (por ejemplo la autorización
+del *Rahapesu Andmebüroo* estonio), hay que revisar el apartado 3 de
+`terminos.html` y el aviso legal del pie de `index.html`.
+
+> Son textos informativos, no asesoramiento jurídico. Antes de operar
+> comercialmente conviene que un abogado estonio los revise.
 
 ## Ver el sitio localmente
 

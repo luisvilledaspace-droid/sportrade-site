@@ -9,5 +9,9 @@ deployment:
     - /bin/mkdir -p /home/gsbwndpt/sportrade.co/css
     - /bin/mkdir -p /home/gsbwndpt/sportrade.co/js
     - /bin/cp -f index.html /home/gsbwndpt/sportrade.co/index.html
+    - /bin/cp -f terminos.html /home/gsbwndpt/sportrade.co/terminos.html
+    - /bin/cp -f privacidad.html /home/gsbwndpt/sportrade.co/privacidad.html
+    - /bin/cp -f datos.html /home/gsbwndpt/sportrade.co/datos.html
     - /bin/cp -f css/styles.css /home/gsbwndpt/sportrade.co/css/styles.css
+    - /bin/cp -f css/legal.css /home/gsbwndpt/sportrade.co/css/legal.css
     - /bin/cp -f js/main.js /home/gsbwndpt/sportrade.co/js/main.js

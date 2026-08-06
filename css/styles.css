@@ -244,17 +244,44 @@ h2.light { color: var(--ivory); }
 .trustbar { background: var(--navy-950); padding: 2.2rem 0; border-block: 1px solid rgba(201,169,106,0.12); }
 .trust-label { text-align: center; font-size: 0.62rem; letter-spacing: 0.4em; color: rgba(245,242,234,0.4); margin-bottom: 1.4rem; font-weight: 600; }
 .registry {
-  display: flex; gap: 2rem; align-items: flex-start;
-  max-width: 860px; margin: 0 auto;
+  max-width: 780px; margin: 0 auto;
   border: 1px solid rgba(201,169,106,0.28);
   background: rgba(255,255,255,0.02);
-  padding: 2.2rem 2.4rem;
+  transition: border-color 0.4s var(--ease-out);
 }
-.registry-seal { width: 62px; height: 62px; color: var(--gold); flex-shrink: 0; }
-.registry-seal svg { width: 100%; height: 100%; }
-.registry-body h3 { font-size: 1.5rem; color: var(--ivory); margin-bottom: 0.6rem; }
-.registry-body > p { font-size: 0.9rem; color: rgba(245,242,234,0.62); max-width: 620px; }
-.registry-body > p strong { color: rgba(245,242,234,0.88); font-weight: 600; }
+.registry[open] { border-color: rgba(201,169,106,0.5); }
+.registry-head {
+  display: flex; align-items: center; gap: 1.1rem;
+  padding: 1.1rem 1.5rem; cursor: pointer; list-style: none;
+  transition: background 0.3s;
+}
+.registry-head::-webkit-details-marker { display: none; }
+.registry-head:hover { background: rgba(201,169,106,0.05); }
+.ee-flag { width: 34px; height: 34px; flex-shrink: 0; color: var(--gold); }
+.ee-flag svg { width: 100%; height: 100%; display: block; }
+.registry-head-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.registry-head-text strong {
+  font-size: 0.86rem; font-weight: 600; color: var(--ivory); letter-spacing: 0.02em;
+}
+.registry-head-text em {
+  font-style: normal; font-size: 0.72rem; letter-spacing: 0.08em;
+  color: rgba(245,242,234,0.45);
+}
+.registry-chevron {
+  margin-left: auto; width: 20px; height: 20px; flex-shrink: 0;
+  color: var(--gold); transition: transform 0.4s var(--ease-out);
+}
+.registry-chevron svg { width: 100%; height: 100%; display: block; }
+.registry[open] .registry-chevron { transform: rotate(180deg); }
+.registry-panel {
+  padding: 0 1.5rem 1.7rem;
+  border-top: 1px solid rgba(201,169,106,0.14);
+  margin-top: -1px;
+  animation: registry-open 0.5s var(--ease-out);
+}
+@keyframes registry-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.registry-panel > p { font-size: 0.88rem; color: rgba(245,242,234,0.62); padding-top: 1.4rem; }
+.registry-panel > p strong { color: rgba(245,242,234,0.88); font-weight: 600; }
 .registry-facts {
   display: grid; grid-template-columns: repeat(2, minmax(0, auto));
   gap: 1.3rem 3rem;
@@ -574,6 +601,8 @@ h2.light { color: var(--ivory); }
 }
 .cta-form textarea { resize: vertical; }
 .form-note { margin-top: 1rem; font-size: 0.7rem; color: var(--ink-soft); text-align: center; }
+.form-note a { color: inherit; border-bottom: 1px solid var(--gold); transition: color 0.3s; }
+.form-note a:hover { color: var(--gold); }
 .cta-form.sent { position: relative; }
 .form-success {
   text-align: center; padding: 3rem 1rem;
