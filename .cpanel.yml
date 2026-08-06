@@ -1,15 +1,12 @@
 ---
-# Despliegue automático de cPanel (Git Version Control → Deploy HEAD Commit).
-#
-# La ruta va escrita completa a propósito: cPanel no expande $HOME de forma
-# fiable en estas tareas, y con la variable vacía los archivos se copian a una
-# ruta inexistente y el despliegue termina sin publicar nada.
-#
-# Cuenta de cPanel: gsbwndpt
 deployment:
   tasks:
     - /bin/mkdir -p /home/gsbwndpt/public_html/css
     - /bin/mkdir -p /home/gsbwndpt/public_html/js
+    - /bin/date > /home/gsbwndpt/public_html/deploy-log.txt
+    - /bin/pwd >> /home/gsbwndpt/public_html/deploy-log.txt
+    - /bin/ls -la >> /home/gsbwndpt/public_html/deploy-log.txt
     - /bin/cp -f index.html /home/gsbwndpt/public_html/index.html
     - /bin/cp -f css/styles.css /home/gsbwndpt/public_html/css/styles.css
     - /bin/cp -f js/main.js /home/gsbwndpt/public_html/js/main.js
+    - /bin/ls -la /home/gsbwndpt/public_html >> /home/gsbwndpt/public_html/deploy-log.txt
