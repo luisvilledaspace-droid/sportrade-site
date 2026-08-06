@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sportrade — El Puente entre Fiat y Cripto</title>
+  <meta name="description" content="Sportrade es el bridge institucional entre el dinero fiat y las criptomonedas: on/off-ramp empresarial, mesa OTC, pasarela de pagos deportiva y conversión express en ambos sentidos. Estándar de banca de Nueva York." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0F1E'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='%23C9A96A' font-family='Georgia'>S</text></svg>" />
+</head>
+<body>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-mark">
+      <span class="preloader-letter">S</span>
+      <span class="preloader-word">SPORTRADE</span>
+    </div>
+    <div class="preloader-bar"><span></span></div>
+  </div>
+
+  <!-- ══════════ TICKER DE MERCADO ══════════ -->
+  <div class="market-ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- ══════════ NAVEGACIÓN ══════════ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">SPORTRADE<em>Financial Infrastructure</em></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#plataforma">Plataforma</a>
+        <a href="#precios">Precios</a>
+        <a href="#express">Conversión Express</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="mobile-cta">Abrir cuenta corporativa</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#contacto" class="btn btn-ghost">Iniciar sesión</a>
+        <a href="#contacto" class="btn btn-gold">Abrir cuenta corporativa</a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2400&auto=format&fit=crop" alt="Skyline de Manhattan al atardecer" loading="eager" />
+      <div class="hero-overlay"></div>
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    </div>
+    <div class="hero-content container">
+      <p class="hero-eyebrow reveal-hero"><span class="line"></span>EL PUENTE FIAT ⇄ CRIPTO · NEW YORK — BOGOTÁ — TALLIN</p>
+      <h1 class="hero-title">
+        <span class="hero-line"><span>El puente entre</span></span>
+        <span class="hero-line"><span>su capital y la</span></span>
+        <span class="hero-line"><span class="gold-serif">economía digital.</span></span>
+      </h1>
+      <p class="hero-sub reveal-hero">Sportrade es el bridge institucional entre el dinero tradicional y las criptomonedas. Convierta pesos, dólares o euros a stablecoins y activos digitales —y de vuelta— en segundos, con una comisión única y transparente del 3% al 4% por conversión, sin importar el monto.</p>
+      <div class="hero-cta reveal-hero">
+        <a href="#contacto" class="btn btn-gold btn-lg">Solicitar acceso <span class="arrow">→</span></a>
+        <a href="#plataforma" class="btn btn-outline btn-lg">Explorar la plataforma</a>
+      </div>
+      <div class="hero-stats reveal-hero">
+        <div class="hstat"><strong data-count="3.1" data-prefix="$" data-suffix="B+" data-decimals="1">$0</strong><span>Convertidos fiat ⇄ cripto</span></div>
+        <div class="hstat"><strong data-count="40" data-suffix="+">0</strong><span>Activos digitales y divisas</span></div>
+        <div class="hstat"><strong data-count="99.99" data-suffix="%" data-decimals="2">0</strong><span>Disponibilidad de plataforma</span></div>
+        <div class="hstat"><strong>T+0</strong><span>Liquidación on-chain 24/7</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ══════════ BARRA DE CONFIANZA ══════════ -->
+  <section class="trustbar">
+    <div class="container">
+      <p class="trust-label">CERTIFICACIONES Y REDES QUE NOS RESPALDAN</p>
+      <div class="trust-marquee">
+        <div class="trust-track">
+          <span>Licencia VASP — UE</span><i>·</i>
+          <span>FinCEN MSB</span><i>·</i>
+          <span>ISO/IEC 27001</span><i>·</i>
+          <span>SOC 2 Type II</span><i>·</i>
+          <span>Chainalysis KYT</span><i>·</i>
+          <span>Fireblocks MPC</span><i>·</i>
+          <span>SWIFT Network</span><i>·</i>
+          <span>Proof of Reserves</span><i>·</i>
+          <span>Licencia VASP — UE</span><i>·</i>
+          <span>FinCEN MSB</span><i>·</i>
+          <span>ISO/IEC 27001</span><i>·</i>
+          <span>SOC 2 Type II</span><i>·</i>
+          <span>Chainalysis KYT</span><i>·</i>
+          <span>Fireblocks MPC</span><i>·</i>
+          <span>SWIFT Network</span><i>·</i>
+          <span>Proof of Reserves</span><i>·</i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MANIFIESTO ══════════ -->
+  <section class="manifesto">
+    <div class="container manifesto-grid">
+      <div class="manifesto-text">
+        <p class="section-eyebrow reveal">NUESTRA TESIS</p>
+        <h2 class="reveal">Dos sistemas financieros.<br/><em>Un solo puente.</em></h2>
+        <p class="reveal">El dinero tradicional y los activos digitales viven en mundos separados: uno cierra a las 4 de la tarde, el otro nunca duerme. Sportrade existe para unirlos. Somos el bridge regulado que permite a una empresa convertir pesos o dólares en stablecoins en segundos, moverlos por el mundo sin fronteras, y volver a fiat cuando lo necesite.</p>
+        <p class="reveal">Combinamos licencias regulatorias, cuentas bancarias en instituciones de primer nivel y liquidez cripto institucional en una sola plataforma, diseñada para directores financieros que exigen precisión de Wall Street en la economía digital.</p>
+        <a href="#soluciones" class="text-link reveal">Conozca nuestras soluciones <span>→</span></a>
+      </div>
+      <figure class="manifesto-media reveal-img">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" alt="Fachada de edificio financiero corporativo" loading="lazy" />
+        <figcaption>Distrito financiero — Nueva York</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════ SOLUCIONES ══════════ -->
+  <section class="solutions" id="soluciones">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal">SOLUCIONES</p>
+        <h2 class="reveal">Todo el ciclo fiat ⇄ cripto,<br/><em>bajo un mismo techo.</em></h2>
+        <p class="section-sub reveal">Seis líneas de producto que cubren el viaje completo del capital —de empresas, clubes, ligas y atletas—: entrar a cripto, moverlo, cobrarlo y volver a fiat.</p>
+      </div>
+      <div class="sol-grid">
+        <article class="sol-card reveal" data-tilt>
+          <div class="sol-num">01</div>
+          <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.7 2.6 4 6 4 9.5s-1.3 6.9-4 9.5c-2.7-2.6-4-6-4-9.5s1.3-6.9 4-9.5z"/></svg></div>
+          <h3>On/Off-Ramp Empresarial</h3>
+          <p>Convierta COP, USD, EUR y 12 divisas más a USDC, USDT, BTC o ETH —y de vuelta— con abono directo a su cuenta bancaria vía SWIFT, SEPA, ACH y rieles locales.</p>
+          <ul><li>Conversión en segundos, 24/7/365</li><li>Comisión única del 3%–4%, cualquier monto</li><li>Liquidación bancaria same-day</li></ul>
+        </article>
+        <article class="sol-card reveal" data-tilt>
+          <div class="sol-num">02</div>
+          <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+          <h3>Mesa OTC Institucional</h3>
+          <p>Ejecute bloques grandes de BTC, ETH y stablecoins con cotización en firme (RFQ), liquidez agregada de múltiples proveedores y cero slippage.</p>
+          <ul><li>Comisión transparente del 3%–4%, todo incluido</li><li>Trader dedicado por chat y voz</li><li>Liquidación T+0 contra fiat o cripto</li></ul>
+        </article>
+        <article class="sol-card reveal" data-tilt>
+          <div class="sol-num">03</div>
+          <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14"/></svg></div>
+          <h3>Ramp-as-a-Service (API)</h3>
+          <p>Incruste el puente fiat ⇄ cripto en su propio producto: exchanges, wallets, remesadoras y fintechs construyen sobre nuestra API de on/off-ramp.</p>
+          <ul><li>API REST con sandbox completo</li><li>KYC/KYB y Travel Rule embebidos</li><li>Webhooks y ledger en tiempo real</li></ul>
+        </article>
+        <article class="sol-card reveal" data-tilt>
+          <div class="sol-num">04</div>
+          <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+          <h3>Pagos Cripto para Comercios</h3>
+          <p>Acepte pagos en criptomonedas de clientes en cualquier parte del mundo y reciba fiat en su cuenta bancaria al día siguiente. Sin volatilidad, sin fricción.</p>
+          <ul><li>Checkout y links de pago en minutos</li><li>Conversión automática a fiat al instante</li><li>Sin exposición a volatilidad</li></ul>
+        </article>
+        <article class="sol-card reveal" data-tilt>
+          <div class="sol-num">05</div>
+          <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4M16 15h2"/></svg></div>
+          <h3>Pasarela de Pagos Deportiva</h3>
+          <p>Boletería de eventos, membresías de clubes, escuelas deportivas y e-commerce: un solo checkout profesional que acepta tarjetas, transferencias y más de 40 criptomonedas.</p>
+          <ul><li>Checkout embebido, QR y links de pago</li><li>Tarjetas, transferencias y cripto en un solo flujo</li><li>Liquidación en fiat o stablecoins, usted decide</li></ul>
+        </article>
+        <article class="sol-card reveal" data-tilt>
+          <div class="sol-num">06</div>
+          <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 21h8M12 17v4M7 3h10v5a5 5 0 0 1-10 0V3z"/><path d="M7 5H4.5a2.5 2.5 0 0 0 2.7 3.4M17 5h2.5a2.5 2.5 0 0 1-2.7 3.4"/></svg></div>
+          <h3>Patrocinios y Donaciones</h3>
+          <p>Atletas, equipos y creadores reciben patrocinios y donaciones en cripto desde cualquier país, convertidos a dólares sin intermediarios: tasa en firme y cero pérdida por slippage.</p>
+          <ul><li>Página de patrocinio con su marca y QR</li><li>Conversión directa a USD con tasa garantizada</li><li>Sin bancos corresponsales ni retenciones ocultas</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PLATAFORMA / DASHBOARD ══════════ -->
+  <section class="platform" id="plataforma">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow light reveal">LA PLATAFORMA</p>
+        <h2 class="light reveal">Su mesa de cambio fiat ⇄ cripto,<br/><em>en tiempo real.</em></h2>
+      </div>
+      <div class="platform-grid">
+        <div class="dash reveal-img" id="dashboard">
+          <div class="dash-top">
+            <div class="dash-dot r"></div><div class="dash-dot y"></div><div class="dash-dot g"></div>
+            <span class="dash-url">app.sportrade.co/bridge</span>
+            <span class="dash-live"><i></i>EN VIVO</span>
+          </div>
+          <div class="dash-body">
+            <aside class="dash-side">
+              <span class="ds-item active">Panorama</span>
+              <span class="ds-item">Convertir</span>
+              <span class="ds-item">Custodia</span>
+              <span class="ds-item">OTC</span>
+              <span class="ds-item">Reportes</span>
+            </aside>
+            <div class="dash-main">
+              <div class="dash-kpis">
+                <div class="kpi"><span>Activos bajo custodia</span><strong id="kpiBalance">$48,236,900</strong><em class="up">▲ 3.2% esta semana</em></div>
+                <div class="kpi"><span>Conversiones hoy</span><strong id="kpiPayments">1,284</strong><em class="up">▲ 214 vs. ayer</em></div>
+                <div class="kpi"><span>BTC/USD</span><strong id="kpiFx">$118,240</strong><em class="up">▲ 1.45%</em></div>
+              </div>
+              <div class="dash-chart">
+                <div class="chart-head"><span>Volumen del puente — últimos 30 días</span><span class="chart-legend"><i class="li-in"></i>On-ramp <i class="li-out"></i>Off-ramp</span></div>
+                <svg id="cashChart" viewBox="0 0 640 220" preserveAspectRatio="none"></svg>
+              </div>
+              <div class="dash-rows" id="dashRows"></div>
+            </div>
+          </div>
+        </div>
+        <div class="platform-feats">
+          <div class="pfeat reveal">
+            <span class="pf-num">→</span>
+            <div><h4>Fiat y cripto, un solo saldo</h4><p>Cuentas bancarias y wallets de custodia en el mismo panel. Vea su posición consolidada en USD sin cambiar de pestaña.</p></div>
+          </div>
+          <div class="pfeat reveal">
+            <span class="pf-num">→</span>
+            <div><h4>Cotización en firme</h4><p>Precio garantizado por 30 segundos antes de ejecutar, con la comisión del 3%–4% ya incluida. Lo que ve es exactamente lo que recibe.</p></div>
+          </div>
+          <div class="pfeat reveal">
+            <span class="pf-num">→</span>
+            <div><h4>Cumplimiento integrado</h4><p>Screening on-chain con Chainalysis, Travel Rule automática y reportes regulatorios listos para su revisor fiscal.</p></div>
+          </div>
+          <div class="pfeat reveal">
+            <span class="pf-num">→</span>
+            <div><h4>API-first</h4><p>Cada función del panel existe también como endpoint. Automatice su puente fiat ⇄ cripto con la misma API que usan nuestros equipos.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CIFRAS ══════════ -->
+  <section class="numbers">
+    <div class="container numbers-grid">
+      <div class="num reveal"><strong data-count="3.1" data-prefix="$" data-suffix="B+" data-decimals="1">$0</strong><span>convertidos fiat ⇄ cripto en los últimos 12 meses</span></div>
+      <div class="num reveal"><strong data-count="640" data-suffix="+">0</strong><span>empresas cruzan el puente con Sportrade</span></div>
+      <div class="num reveal"><strong data-count="40" data-suffix="+">0</strong><span>activos digitales y divisas soportados</span></div>
+      <div class="num reveal"><strong data-count="0">0</strong><span>incidentes de custodia desde nuestra fundación</span></div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRECIOS ══════════ -->
+  <section class="pricing" id="precios">
+    <div class="container pricing-grid">
+      <div class="pricing-big reveal-img">
+        <span class="pricing-rate"><em data-count="3">0</em><i>%</i><span class="pricing-dash">—</span><em data-count="4">0</em><i>%</i></span>
+        <span class="pricing-tagline">por conversión. Eso es todo.</span>
+      </div>
+      <div class="pricing-text">
+        <p class="section-eyebrow reveal">PRECIOS TRANSPARENTES</p>
+        <h2 class="reveal">Una sola comisión.<br/><em>Ninguna letra pequeña.</em></h2>
+        <p class="reveal">Convertir fiat a cripto —o cripto a fiat— tiene un solo costo: entre el 3% y el 4% de la operación, según su volumen mensual. Da igual si convierte cien dólares o diez millones: la tarifa es la misma, visible antes de confirmar y ya incluida en la cotización.</p>
+        <ul class="pricing-list">
+          <li class="reveal"><span>✓</span>Sin montos mínimos ni máximos</li>
+          <li class="reveal"><span>✓</span>Sin cargos de apertura, mantenimiento ni inactividad</li>
+          <li class="reveal"><span>✓</span>Custodia, red y cumplimiento incluidos en la tarifa</li>
+          <li class="reveal"><span>✓</span>3% para volúmenes altos · 4% tarifa estándar</li>
+        </ul>
+        <a href="#express" class="btn btn-gold btn-lg reveal">Cotizar mi conversión <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONVERSIÓN EXPRESS ══════════ -->
+  <section class="express" id="express">
+    <div class="container express-grid">
+      <div class="express-text">
+        <p class="section-eyebrow reveal">CONVERSIÓN EXPRESS</p>
+        <h2 class="reveal">Cripto ⇄ fiat,<br/><em>sin registro previo.</em></h2>
+        <p class="reveal">¿Necesita convertir hoy mismo, en cualquiera de los dos sentidos? Inicie una conversión express con datos mínimos: elija la dirección y la criptomoneda, déjenos un nombre y un correo, y nuestro equipo le responderá en minutos con los datos de depósito y la coordinación para entregarle sus fondos.</p>
+        <div class="express-points">
+          <div class="expt reveal"><strong>1</strong><p>Elija la dirección —cripto a fiat o fiat a cripto—, la moneda y el monto estimado.</p></div>
+          <div class="expt reveal"><strong>2</strong><p>Reciba por correo los datos de depósito: nuestra wallet o nuestra cuenta bancaria, según el sentido de su operación.</p></div>
+          <div class="expt reveal"><strong>3</strong><p>Reciba sus fondos el mismo día en su banco o en su wallet. Comisión única del 3%–4%, ya incluida en la cotización.</p></div>
+        </div>
+        <p class="express-note reveal">Privacidad primero: solo pedimos lo esencial para operar. Operaciones sujetas a verificación adicional según monto y jurisdicción aplicable.</p>
+      </div>
+      <form class="express-form reveal-img" id="expressForm">
+        <h3>Iniciar conversión</h3>
+        <div class="form-row">
+          <span class="field-label">Dirección de la conversión</span>
+          <div class="direction-toggle" id="directionToggle">
+            <button type="button" class="dir-btn active" data-dir="cripto-fiat">Cripto → Fiat</button>
+            <button type="button" class="dir-btn" data-dir="fiat-cripto">Fiat → Cripto</button>
+          </div>
+          <input type="hidden" name="direccion" id="direccionInput" value="Cripto → Fiat" />
+        </div>
+        <div class="form-row two">
+          <label>Criptomoneda
+            <select name="criptomoneda">
+              <option>USDT (Tether)</option>
+              <option>USDC</option>
+              <option>BTC (Bitcoin)</option>
+              <option>ETH (Ethereum)</option>
+              <option>SOL (Solana)</option>
+              <option>Otra</option>
+            </select>
+          </label>
+          <label>Moneda fiat
+            <select name="moneda_fiat">
+              <option>USD — Dólar</option>
+              <option>COP — Peso colombiano</option>
+              <option>EUR — Euro</option>
+              <option>MXN — Peso mexicano</option>
+              <option>Otra</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Monto estimado<input type="text" name="monto_estimado" placeholder="p. ej. 5,000 USDT" id="montoInput" /></label>
+        </div>
+        <div class="form-row">
+          <label>Nombre<input type="text" name="nombre" placeholder="Su nombre" required /></label>
+        </div>
+        <div class="form-row">
+          <label>Correo para coordinar el depósito<input type="email" name="correo" placeholder="usted@correo.com" required /></label>
+        </div>
+        <button type="submit" class="btn btn-gold btn-lg btn-block">Iniciar conversión <span class="arrow">→</span></button>
+        <p class="form-note">Su solicitud llega directamente a info@sportrade.co. Respuesta en minutos en horario extendido, todos los días.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIOS ══════════ -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-eyebrow reveal">LO QUE DICEN NUESTROS CLIENTES</p>
+      <div class="testi-slider" id="testiSlider">
+        <div class="testi-track" id="testiTrack">
+          <blockquote class="testi">
+            <p>“Antes tardábamos 4 días y tres intermediarios para pagar a un proveedor en Asia. Hoy convertimos pesos a USDC en Sportrade y el pago llega el mismo día. El puente fiat-cripto dejó de ser una promesa: es nuestra operación diaria.”</p>
+            <footer>
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Retrato de Andrés Caro" loading="lazy" />
+              <div><strong>Andrés Caro</strong><span>CFO — Grupo Andino de Alimentos</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="testi">
+            <p>“Mantenemos el 40% de nuestra tesorería en stablecoins con custodia calificada. Nos protegimos de la devaluación sin sacrificar liquidez: si necesito pesos mañana a las 6 a.m., convierto en un clic.”</p>
+            <footer>
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Retrato de Mariana Duque" loading="lazy" />
+              <div><strong>Mariana Duque</strong><span>VP Finanzas — Nubeloop SaaS</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="testi">
+            <p>“Integramos la API de Sportrade y en tres semanas nuestra app de remesas ya movía dinero de Miami a Bogotá sobre rieles cripto. Nuestros usuarios ven pesos; el puente hace la magia por debajo.”</p>
+            <footer>
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" alt="Retrato de Julián Restrepo" loading="lazy" />
+              <div><strong>Julián Restrepo</strong><span>COO — Vermont Media Group</span></div>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="testi-nav">
+          <button id="testiPrev" aria-label="Anterior">←</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button id="testiNext" aria-label="Siguiente">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROCESO ══════════ -->
+  <section class="process">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow reveal">CÓMO EMPEZAR</p>
+        <h2 class="reveal">De la primera llamada a operar,<br/><em>en menos de una semana.</em></h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span>01</span><h4>Conversación inicial</h4><p>Un especialista analiza sus flujos, volúmenes y casos de uso —pagos, tesorería o remesas— para diseñar su puente óptimo.</p></div>
+        <div class="step reveal"><span>02</span><h4>Verificación corporativa</h4><p>Onboarding KYB 100% digital, incluyendo verificación de origen de fondos. La mayoría de las empresas quedan aprobadas en 48 horas hábiles.</p></div>
+        <div class="step reveal"><span>03</span><h4>Configuración y migración</h4><p>Abrimos sus cuentas fiat, creamos sus wallets de custodia y conectamos su ERP o su producto vía API con acompañamiento dedicado.</p></div>
+        <div class="step reveal"><span>04</span><h4>Operación con soporte 24/7</h4><p>Un gerente de cuenta y una mesa de soporte en español, disponibles todos los días del año.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA FINAL ══════════ -->
+  <section class="cta" id="contacto">
+    <div class="cta-bg">
+      <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=2400&auto=format&fit=crop" alt="Arquitectura clásica del distrito financiero" loading="lazy" />
+      <div class="cta-overlay"></div>
+    </div>
+    <div class="container cta-grid">
+      <div class="cta-text">
+        <p class="section-eyebrow light reveal">HABLEMOS</p>
+        <h2 class="light reveal">Su empresa merece una banca<br/><em>a su altura.</em></h2>
+        <p class="reveal">Cuéntenos sobre su operación y un especialista senior lo contactará el mismo día hábil. Sin llamadas de ventas genéricas: hablará con alguien que entiende de tesorería y de activos digitales.</p>
+        <div class="cta-contacts reveal">
+          <a href="mailto:info@sportrade.co">info@sportrade.co</a>
+          <span>+1 904 582 8016</span>
+        </div>
+      </div>
+      <form class="cta-form reveal-img" id="contactForm">
+        <h3>Solicitar acceso</h3>
+        <div class="form-row">
+          <label>Nombre completo<input type="text" name="nombre" placeholder="María Fernanda López" required /></label>
+        </div>
+        <div class="form-row">
+          <label>Correo corporativo<input type="email" name="email" placeholder="nombre@empresa.com" required /></label>
+        </div>
+        <div class="form-row two">
+          <label>Empresa<input type="text" name="empresa" placeholder="Empresa S.A.S." required /></label>
+          <label>Volumen mensual
+            <select name="volumen">
+              <option>Menos de $100K USD</option>
+              <option>$100K – $1M USD</option>
+              <option>$1M – $10M USD</option>
+              <option>Más de $10M USD</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>¿Qué necesita resolver?<textarea name="mensaje" rows="3" placeholder="Convertir tesorería a stablecoins, pagos internacionales vía cripto, on/off-ramp para mi app..."></textarea></label>
+        </div>
+        <button type="submit" class="btn btn-gold btn-lg btn-block">Enviar solicitud <span class="arrow">→</span></button>
+        <p class="form-note">Al enviar acepta nuestra política de tratamiento de datos. Respuesta en el mismo día hábil.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="nav-logo">
+            <span class="logo-mark">S</span>
+            <span class="logo-text">SPORTRADE<em>Financial Infrastructure</em></span>
+          </a>
+          <p>El puente institucional entre el dinero fiat y las criptomonedas. Nueva York · Bogotá · Tallin · Singapur.</p>
+          <p class="footer-contact"><a href="mailto:info@sportrade.co">info@sportrade.co</a><br/><a href="tel:+19045828016">+1 904 582 8016</a></p>
+        </div>
+        <div class="footer-col">
+          <h5>Soluciones</h5>
+          <a href="#soluciones">On/Off-Ramp empresarial</a>
+          <a href="#soluciones">Mesa OTC institucional</a>
+          <a href="#soluciones">Pagos cripto para comercios</a>
+          <a href="#soluciones">Pasarela de pagos deportiva</a>
+          <a href="#soluciones">Patrocinios y donaciones</a>
+          <a href="#express">Conversión Express</a>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <a href="#precios">Precios</a>
+          <a href="#express">Conversión Express</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#">Carreras</a>
+          <a href="#">Prensa</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="#">Términos de servicio</a>
+          <a href="#">Política de privacidad</a>
+          <a href="#">Tratamiento de datos</a>
+          <a href="#">Licencias regulatorias</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Sportrade Financial Infrastructure. Todos los derechos reservados.</p>
+        <p class="footer-disclaimer">Sportrade no es un banco. Los servicios bancarios son provistos por instituciones financieras aliadas debidamente licenciadas. Los criptoactivos no son moneda de curso legal, no están cubiertos por seguros de depósito estatales y su valor puede fluctuar significativamente. Los servicios de activos digitales están disponibles únicamente para clientes corporativos aprobados y pueden no estar disponibles en todas las jurisdicciones.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
