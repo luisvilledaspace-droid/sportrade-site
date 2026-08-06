@@ -1,6 +1,7 @@
 # Sportrade — Sitio web
 
-Sitio institucional de **Sportrade OÜ**, el puente entre fiat y criptomonedas.
+Sitio institucional de **Sportrade OÜ** (código de registro estonio 16685537),
+que desarrolla la tecnología del puente entre fiat y criptomonedas.
 
 Es un sitio **estático** (HTML + CSS + JavaScript, sin build ni dependencias).
 Se puede subir tal cual a cualquier hosting.
@@ -82,7 +83,11 @@ Para actualizar el valor de respaldo, cambie `data-count` en ambos elementos.
 
 - [ ] Activar FormSubmit con el correo de confirmación.
 - [ ] Reemplazar `USUARIO` en `.cpanel.yml` por el usuario real de cPanel.
-- [ ] Reemplazar cifras y certificaciones de demostración por las reales
-      (volumen procesado, número de clientes, licencias, testimonios).
+- [ ] Reemplazar las cifras de demostración que siguen siendo inventadas:
+      "640+ empresas", "40+ activos", "99.99% disponibilidad" y los tres
+      testimonios. La cifra de conversiones totales ya es real (viene del panel).
+- [ ] Revisar dos afirmaciones técnicas por si no corresponden a integraciones
+      contratadas: "KYC/KYB y Travel Rule embebidos" (tarjeta de API) y
+      "Screening on-chain con Chainalysis" (sección de plataforma).
 - [ ] Reemplazar las fotos de Unsplash por fotografía propia si se desea.
 - [ ] Revisar el texto legal del pie de página con un asesor jurídico.
