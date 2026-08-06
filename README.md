@@ -62,10 +62,10 @@ Las dos cifras marcadas con `data-live-total` en `index.html` (el hero y la
 sección de números) muestran el **volumen bruto gestionado** tomado del panel
 interno.
 
-Para conectarlas, edite en `js/main.js` la constante:
+Ya está conectado al panel, configurado en `js/main.js`:
 
 ```js
-var PANEL_ORIGIN = "https://SU-DOMINIO";   // sin barra final
+var PANEL_ORIGIN = "https://guru-master-control.ai.studio";
 ```
 
 Consulta `GET {PANEL_ORIGIN}/api/public/fintech/total-income` y usa el campo
@@ -81,7 +81,6 @@ Para actualizar el valor de respaldo, cambie `data-count` en ambos elementos.
 ## Pendientes antes de publicar
 
 - [ ] Activar FormSubmit con el correo de confirmación.
-- [ ] Definir `PANEL_ORIGIN` en `js/main.js` para la cifra en vivo.
 - [ ] Reemplazar `USUARIO` en `.cpanel.yml` por el usuario real de cPanel.
 - [ ] Reemplazar cifras y certificaciones de demostración por las reales
       (volumen procesado, número de clientes, licencias, testimonios).

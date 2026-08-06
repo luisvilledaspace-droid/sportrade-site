@@ -188,7 +188,7 @@
      final. Ejemplo: "https://panel.sportrade.co"
      Si se deja vacío, el sitio muestra el valor estático de data-count y no
      hace ninguna petición. */
-  var PANEL_ORIGIN = "";
+  var PANEL_ORIGIN = "https://guru-master-control.ai.studio";
   var TOTAL_ENDPOINT = "/api/public/fintech/total-income";
 
   function refreshLiveTotal() {
