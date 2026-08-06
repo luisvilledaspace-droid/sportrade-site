@@ -27,8 +27,12 @@ npx serve .
 
 ### Opción A — Git Version Control (recomendada, permite actualizar con un clic)
 
-El archivo `.cpanel.yml` ya está listo y usa `$HOME`, así que **no hay que editarlo**.
-Publica en `public_html` (dominio principal).
+El archivo `.cpanel.yml` ya está listo y **no hay que editarlo**.
+
+> **Ojo con el document root.** `sportrade.co` es un dominio *adicional* de la
+> cuenta `gsbwndpt`, y su document root es `/home/gsbwndpt/sportrade.co`,
+> **no** `public_html` (que pertenece al dominio principal). Confírmelo en
+> *cPanel → Dominios → sportrade.co → Document Root* si algún día cambia.
 
 1. En cPanel: **Git™ Version Control → Create**.
    - Active *Clone a Repository*.

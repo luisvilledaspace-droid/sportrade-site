@@ -1,12 +1,13 @@
 ---
+# Despliegue automatico de cPanel (Git Version Control -> Deploy HEAD Commit).
+#
+# sportrade.co es un dominio adicional: su document root NO es public_html,
+# sino /home/gsbwndpt/sportrade.co (confirmado en cPanel > Dominios).
+# public_html pertenece al dominio principal y no debe tocarse.
 deployment:
   tasks:
-    - /bin/mkdir -p /home/gsbwndpt/public_html/css
-    - /bin/mkdir -p /home/gsbwndpt/public_html/js
-    - /bin/date > /home/gsbwndpt/public_html/deploy-log.txt
-    - /bin/pwd >> /home/gsbwndpt/public_html/deploy-log.txt
-    - /bin/ls -la >> /home/gsbwndpt/public_html/deploy-log.txt
-    - /bin/cp -f index.html /home/gsbwndpt/public_html/index.html
-    - /bin/cp -f css/styles.css /home/gsbwndpt/public_html/css/styles.css
-    - /bin/cp -f js/main.js /home/gsbwndpt/public_html/js/main.js
-    - /bin/ls -la /home/gsbwndpt/public_html >> /home/gsbwndpt/public_html/deploy-log.txt
+    - /bin/mkdir -p /home/gsbwndpt/sportrade.co/css
+    - /bin/mkdir -p /home/gsbwndpt/sportrade.co/js
+    - /bin/cp -f index.html /home/gsbwndpt/sportrade.co/index.html
+    - /bin/cp -f css/styles.css /home/gsbwndpt/sportrade.co/css/styles.css
+    - /bin/cp -f js/main.js /home/gsbwndpt/sportrade.co/js/main.js
