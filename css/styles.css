@@ -256,66 +256,6 @@ h2.light { color: var(--ivory); }
 .hero-scroll span { display: block; width: 100%; height: 40%; background: var(--gold); animation: scroll-drop 2s ease-in-out infinite; }
 @keyframes scroll-drop { 0% { transform: translateY(-100%);} 100% { transform: translateY(260%);} }
 
-/* ─────────── Trustbar ─────────── */
-.trustbar { background: var(--navy-950); padding: 2.2rem 0; border-block: 1px solid rgba(201,169,106,0.12); }
-.trust-label { text-align: center; font-size: 0.62rem; letter-spacing: 0.4em; color: rgba(245,242,234,0.4); margin-bottom: 1.4rem; font-weight: 600; }
-.registry {
-  max-width: 780px; margin: 0 auto;
-  border: 1px solid rgba(201,169,106,0.28);
-  background: rgba(255,255,255,0.02);
-  transition: border-color 0.4s var(--ease-out);
-}
-.registry[open] { border-color: rgba(201,169,106,0.5); }
-.registry-head {
-  display: flex; align-items: center; gap: 1.1rem;
-  padding: 1.1rem 1.5rem; cursor: pointer; list-style: none;
-  transition: background 0.3s;
-}
-.registry-head::-webkit-details-marker { display: none; }
-.registry-head:hover { background: rgba(201,169,106,0.05); }
-.ee-flag { width: 34px; height: 34px; flex-shrink: 0; color: var(--gold); }
-.ee-flag svg { width: 100%; height: 100%; display: block; }
-.registry-head-text { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
-.registry-head-text strong {
-  font-size: 0.86rem; font-weight: 600; color: var(--ivory); letter-spacing: 0.02em;
-}
-.registry-head-text em {
-  font-style: normal; font-size: 0.72rem; letter-spacing: 0.08em;
-  color: rgba(245,242,234,0.45);
-}
-.registry-chevron {
-  margin-left: auto; width: 20px; height: 20px; flex-shrink: 0;
-  color: var(--gold); transition: transform 0.4s var(--ease-out);
-}
-.registry-chevron svg { width: 100%; height: 100%; display: block; }
-.registry[open] .registry-chevron { transform: rotate(180deg); }
-.registry-panel {
-  padding: 0 1.5rem 1.7rem;
-  border-top: 1px solid rgba(201,169,106,0.14);
-  margin-top: -1px;
-  animation: registry-open 0.5s var(--ease-out);
-}
-@keyframes registry-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
-.registry-panel > p { font-size: 0.88rem; color: rgba(245,242,234,0.62); padding-top: 1.4rem; }
-.registry-panel > p strong { color: rgba(245,242,234,0.88); font-weight: 600; }
-.registry-facts {
-  display: grid; grid-template-columns: repeat(2, minmax(0, auto));
-  gap: 1.3rem 3rem;
-  margin: 1.6rem 0 1.4rem; justify-content: start;
-}
-.registry-facts dt {
-  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: rgba(245,242,234,0.4); font-weight: 600; margin-bottom: 0.3rem;
-}
-.registry-facts dd { font-size: 0.86rem; color: var(--gold-bright); font-variant-numeric: tabular-nums; }
-.registry-link {
-  display: inline-flex; gap: 0.5rem; align-items: center;
-  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.03em;
-  color: var(--ivory); border-bottom: 1px solid var(--gold-dim);
-  padding-bottom: 0.3rem; transition: color 0.3s, gap 0.3s var(--ease-out), border-color 0.3s;
-}
-.registry-link:hover { color: var(--gold-bright); gap: 0.9rem; border-color: var(--gold); }
-
 /* ─────────── Manifesto ─────────── */
 .manifesto { background: var(--paper); padding: 8rem 0; }
 .manifesto-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 5rem; align-items: center; }
@@ -640,6 +580,16 @@ h2.light { color: var(--ivory); }
 .footer-col a:hover { color: var(--gold-bright); transform: translateX(4px); }
 .footer-legal { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 1.8rem; }
 .footer-legal p { font-size: 0.74rem; color: rgba(245,242,234,0.4); }
+.footer-registry {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.footer-registry .sep { color: rgba(201,169,106,0.5); }
+.footer-registry a {
+  color: rgba(245,242,234,0.55); border-bottom: 1px solid rgba(201,169,106,0.4);
+  padding-bottom: 1px; transition: color 0.3s, border-color 0.3s;
+}
+.footer-registry a:hover { color: var(--gold-bright); border-color: var(--gold); }
 .footer-disclaimer { margin-top: 0.7rem; font-size: 0.68rem !important; color: rgba(245,242,234,0.28) !important; max-width: 860px; line-height: 1.7; }
 
 /* ─────────── Reveal on scroll ─────────── */
@@ -703,8 +653,6 @@ h2.light { color: var(--ivory); }
   .logo-text { font-size: 0.7rem; letter-spacing: 0.18em; }
   .logo-text em { font-size: 0.48rem; }
   .logo-mark { width: 34px; height: 34px; font-size: 1.1rem; }
-  .registry { flex-direction: column; gap: 1.4rem; padding: 1.8rem; }
-  .registry-facts { grid-template-columns: 1fr; gap: 1.1rem; }
   .manifesto, .solutions, .platform, .testimonials, .process, .cta, .pricing, .express { padding: 4.5rem 0; }
   .pricing-big { padding: 3rem 1.2rem; }
   .express-form { padding: 1.8rem; }

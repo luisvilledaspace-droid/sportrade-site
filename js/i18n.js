@@ -19,14 +19,6 @@ window.SPORTRADE_I18N = {
     "hero.stat1": "Volumen gestionado", "hero.stat2": "Activos y divisas soportados",
     "hero.stat3": "Disponibilidad de plataforma", "hero.stat4": "Procesamiento continuo",
 
-    "registry.title": "Sportrade OÜ · Sociedad registrada en Estonia",
-    "registry.subtitle": "Código de registro 16685537 — Unión Europea",
-    "registry.body": "Sociedad de responsabilidad limitada constituida el <strong>1 de marzo de 2023</strong> e inscrita en el Registro Mercantil de la República de Estonia, Estado miembro de la Unión Europea. Su actividad registrada es el <strong>desarrollo de software</strong> (código EMTAK 62101): construimos la tecnología que hace posible el puente entre fiat y activos digitales.",
-    "registry.f1": "Código de registro", "registry.f2": "Actividad registrada",
-    "registry.f2v": "EMTAK 62101 — Programación", "registry.f3": "Forma jurídica",
-    "registry.f3v": "Osaühing (OÜ)", "registry.f4": "Domicilio social",
-    "registry.verify": "Verificar el registro en la fuente oficial",
-
     "manifesto.eyebrow": "NUESTRA TESIS",
     "manifesto.title": "Dos sistemas financieros.<br/><em>Una sola infraestructura.</em>",
     "manifesto.p1": "El dinero tradicional y los activos digitales viven en mundos separados: uno cierra a las 4 de la tarde, el otro nunca duerme. Sportrade existe para conectarlos. Desarrollamos las capas de software que permiten a una empresa mover valor entre ambos sistemas sin cambiar de herramienta ni de proveedor.",
@@ -125,6 +117,7 @@ window.SPORTRADE_I18N = {
     "foot.terms": "Términos de servicio", "foot.privacy": "Política de privacidad",
     "foot.data": "Tratamiento de datos", "foot.registry": "Registro mercantil",
     "foot.copy": "© 2026 Sportrade OÜ. Todos los derechos reservados.",
+    "foot.regline": "Registro Mercantil de Estonia 16685537", "foot.verify": "Verificar ↗",
     "foot.disclaimer": "Sportrade OÜ es una sociedad inscrita en el Registro Mercantil de Estonia con el código 16685537, cuya actividad registrada es el desarrollo de software (EMTAK 62101). Sportrade desarrolla y opera tecnología financiera; no es un banco ni una entidad de crédito, y los servicios bancarios son provistos por instituciones financieras aliadas debidamente licenciadas. Los activos digitales no son moneda de curso legal, no están cubiertos por seguros de depósito estatales y su valor puede fluctuar significativamente. Los servicios están disponibles únicamente para clientes corporativos aprobados y pueden no estar disponibles en todas las jurisdicciones."
   },
 
@@ -140,14 +133,6 @@ window.SPORTRADE_I18N = {
     "hero.cta1": "Request access", "hero.cta2": "Explore the platform",
     "hero.stat1": "Volume processed", "hero.stat2": "Assets and currencies supported",
     "hero.stat3": "Platform uptime", "hero.stat4": "Continuous processing",
-
-    "registry.title": "Sportrade OÜ · Company registered in Estonia",
-    "registry.subtitle": "Registry code 16685537 — European Union",
-    "registry.body": "A private limited company incorporated on <strong>1 March 2023</strong> and entered in the Commercial Register of the Republic of Estonia, a member state of the European Union. Its registered activity is <strong>software development</strong> (EMTAK code 62101): we build the technology that bridges fiat and digital assets.",
-    "registry.f1": "Registry code", "registry.f2": "Registered activity",
-    "registry.f2v": "EMTAK 62101 — Programming", "registry.f3": "Legal form",
-    "registry.f3v": "Osaühing (OÜ)", "registry.f4": "Registered office",
-    "registry.verify": "Verify the registration at the official source",
 
     "manifesto.eyebrow": "OUR THESIS",
     "manifesto.title": "Two financial systems.<br/><em>One infrastructure.</em>",
@@ -247,6 +232,7 @@ window.SPORTRADE_I18N = {
     "foot.terms": "Terms of service", "foot.privacy": "Privacy policy",
     "foot.data": "Data processing", "foot.registry": "Commercial register",
     "foot.copy": "© 2026 Sportrade OÜ. All rights reserved.",
+    "foot.regline": "Estonian Commercial Register 16685537", "foot.verify": "Verify ↗",
     "foot.disclaimer": "Sportrade OÜ is a company entered in the Estonian Commercial Register under code 16685537, whose registered activity is software development (EMTAK 62101). Sportrade builds and operates financial technology; it is not a bank or a credit institution, and banking services are provided by duly licensed partner financial institutions. Digital assets are not legal tender, are not covered by state deposit guarantee schemes and their value may fluctuate significantly. Services are available only to approved corporate clients and may not be available in all jurisdictions."
   },
 
@@ -262,14 +248,6 @@ window.SPORTRADE_I18N = {
     "hero.cta1": "Taotle ligipääsu", "hero.cta2": "Tutvu platvormiga",
     "hero.stat1": "Töödeldud maht", "hero.stat2": "Toetatud varad ja valuutad",
     "hero.stat3": "Platvormi käideldavus", "hero.stat4": "Pidev töötlemine",
-
-    "registry.title": "Sportrade OÜ · Eestis registreeritud äriühing",
-    "registry.subtitle": "Registrikood 16685537 — Euroopa Liit",
-    "registry.body": "Osaühing, mis asutati <strong>1. märtsil 2023</strong> ja on kantud Eesti Vabariigi äriregistrisse. Registreeritud tegevusala on <strong>tarkvaraarendus</strong> (EMTAK kood 62101): ehitame tehnoloogiat, mis ühendab tavaraha ja digitaalvarad.",
-    "registry.f1": "Registrikood", "registry.f2": "Registreeritud tegevusala",
-    "registry.f2v": "EMTAK 62101 — Programmeerimine", "registry.f3": "Õiguslik vorm",
-    "registry.f3v": "Osaühing (OÜ)", "registry.f4": "Registrijärgne aadress",
-    "registry.verify": "Kontrolli registrikannet ametlikust allikast",
 
     "manifesto.eyebrow": "MEIE LÄHTEKOHT",
     "manifesto.title": "Kaks finantssüsteemi.<br/><em>Üks taristu.</em>",
@@ -369,6 +347,7 @@ window.SPORTRADE_I18N = {
     "foot.terms": "Teenusetingimused", "foot.privacy": "Privaatsuspoliitika",
     "foot.data": "Andmetöötlus", "foot.registry": "Äriregister",
     "foot.copy": "© 2026 Sportrade OÜ. Kõik õigused kaitstud.",
+    "foot.regline": "Eesti äriregister 16685537", "foot.verify": "Kontrolli ↗",
     "foot.disclaimer": "Sportrade OÜ on Eesti äriregistrisse kantud äriühing registrikoodiga 16685537, mille registreeritud tegevusala on tarkvaraarendus (EMTAK 62101). Sportrade arendab ja haldab finantstehnoloogiat; ta ei ole pank ega krediidiasutus ning pangateenuseid osutavad nõuetekohaselt tegevusluba omavad partnerfinantsasutused. Digitaalvarad ei ole seaduslik maksevahend, neile ei laiene riiklik hoiuste tagamise skeem ja nende väärtus võib oluliselt kõikuda. Teenused on saadaval üksnes heakskiidetud ärikliendile ega pruugi olla kättesaadavad kõigis jurisdiktsioonides."
   }
 };
