@@ -99,9 +99,17 @@ Para publicar cambios futuros: `git push` y luego *Deploy HEAD Commit* en cPanel
 Ambos formularios (Solicitar acceso y Conversión Express) envían a
 **info@sportrade.co** mediante [FormSubmit](https://formsubmit.co), sin backend.
 
-> **Activación obligatoria:** la primera vez que se envía un formulario,
-> FormSubmit manda un correo con un botón **"Activate Form"** a info@sportrade.co.
-> Hasta que se haga clic en ese enlace, **ningún envío se entrega**.
+> **Activación obligatoria, y es por URL:** la primera vez que se envía un
+> formulario desde una dirección web concreta, FormSubmit manda un correo con
+> un botón **"Activate Form"** a info@sportrade.co. Hasta que se haga clic en
+> ese enlace, **ningún envío desde esa URL se entrega**.
+>
+> Ojo: activar `localhost` **no** activa `sportrade.co`. Cada origen cuenta
+> como un formulario distinto y necesita su propio clic. Si algún día el sitio
+> se mueve a otro dominio o subdominio, habrá que repetir la activación.
+>
+> Si un envío falla, la consola del navegador registra el motivo exacto
+> (`[Sportrade] Envío no confirmado: ...`).
 > Si el envío falla, el formulario ofrece un enlace de respaldo que abre el
 > correo del visitante con los datos ya escritos.
 

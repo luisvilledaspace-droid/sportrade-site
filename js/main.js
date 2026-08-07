@@ -512,7 +512,11 @@
         // activar): la verdad está en el campo `success` del cuerpo, no en el status.
         if (String(data.success) !== "true") throw new Error(data.message || "envío no confirmado");
         form.innerHTML = successHtml(successMsg);
-      }).catch(function () {
+      }).catch(function (error) {
+        // La causa exacta queda en consola: FormSubmit exige activar cada URL
+        // por separado, y ese caso hay que poder distinguirlo de una caída real.
+        if (window.console) console.warn("[Sportrade] Envío no confirmado:", error.message);
+
         btn.disabled = false;
         btn.innerHTML = "Reintentar <span class='arrow'>→</span>";
         var err = form.querySelector(".form-error");
